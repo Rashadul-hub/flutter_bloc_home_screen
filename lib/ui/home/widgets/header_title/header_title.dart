@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+class HeaderTitle extends StatelessWidget {
+  const HeaderTitle({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Welcome Gamer👋',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 25.0
+              ),
+            ),
+
+            const SizedBox(height: 8.0),
+            Text(
+              'What would you like to play? ',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14.0
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(width: 18.0),
+        CircleAvatar(
+          radius: 35,
+          backgroundImage: NetworkImage(
+            // 'https://cdn2.myminifactory.com/assets/object-assets/5f435a90d22ba/images/720X720-viper-avatar.jpg',
+            'https://previews.123rf.com/images/kingvector/kingvector2201/kingvector220100074/180826044-professional-gaming-mascot-logo-design-killer-shadow-mascot-logo-designs-esports.jpg'
+             ),
+        )
+      ],
+    );
+  }
+}
